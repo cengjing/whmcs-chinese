@@ -15,7 +15,5 @@ Chinese language support for WHMCS.
 
 ### 联系
 
-```
-Email: admin@mtimer.cn
-Web: [MTimer.CN](http://www.mtimer.cn)
-```
+> Email: [MTimer](mailto:mtimercms@hotmail.com)
+> Web: [MTimer.CN](http://www.mtimer.cn)
