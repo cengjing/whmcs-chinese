@@ -494,7 +494,7 @@ $_LANG['maxmind_callingnow'] = "我们将自动拨打电话。这是我们防止
 $_LANG['maxmind_countrymismatch'] = "您的IP地址与填写的资料里的国家不匹配，所以我们不能接受您的订单.";
 $_LANG['maxmind_error'] = "错误";
 $_LANG['maxmind_faileddescription'] = "您输入的代码是不正确的，如果您觉得系统有误请尽快联络我们的支持部门。";
-$_LANG['maxmind_highfraudriskscore'] = "我们的系统察觉您订单诈骗的风险很大因此阻止了此订单。";
+$_LANG['maxmind_highfraudriskscore'] = '我们的系统察觉您订单欺诈的风险很大因此需要人工审核。<br /><br />如果你认为此信息错误, 请接收我们的歉意并向客服部 <a href="submitticket.php">提交工单</a> 。感谢您的理解。';
 $_LANG['maxmind_highriskcountry'] = "我们不能接受来自您的国家的订购因为诈骗的风险很大。";
 $_LANG['maxmind_incorrectcode'] = "错误的代码";
 $_LANG['maxmind_pincode'] = "个人识别码";
@@ -1515,6 +1515,27 @@ $_LANG['enomfrregistration']['EU Non-French Companies']['Name'] = 'EU Non-French
 $_LANG['enomfrregistration']['EU Non-French Companies']['Requirements'] = 'Please provide the company "DUNS Number", and the "Birthdate" of the Owner Contact.';
 $_LANG['enomfrregistration']['Non-EU Warning'] = 'Client contact information must be within the EU or else registration will fail.';
 
+$_LANG['confirm'] = "Confirm";
+
 $_LANG['maxmind_checkconfiguration'] = 'An error occurred with the Fraud Check. Please contact support.';
 $_LANG['maxmind_addressinvalid'] = 'Your address is not recognised. Please check and re-enter.';
 $_LANG['maxmind_invalidip'] = 'IP Address invalid or a local address. Please contact support.';
+
+$_LANG['directDebitPageTitle'] = "Direct Debit Payment";
+$_LANG['directDebitHeader'] = "Direct Debit Payment";
+$_LANG['directDebitErrorNoBankName'] = "You must enter your banks name";
+$_LANG['directDebitErrorAccountType'] = "You must select your bank account type";
+$_LANG['directDebitErrorNoABA'] = "You must enter your banks ABA code";
+$_LANG['directDebitErrorAccNumber'] = "You must enter your bank account number";
+$_LANG['directDebitErrorConfirmAccNumber'] = "You must confirm your bank account number";
+$_LANG['directDebitErrorAccNumberMismatch'] = "Your bank account number & confirmation don't match";
+$_LANG['directDebitThanks'] = "Thank you for submitting your details. We will attempt to process your payment using the supplied details within the next few days, and contact you in case of any problems.";
+$_LANG['directDebitPleaseSubmit'] = "Please submit your bank account details below to pay by Direct Debit.";
+$_LANG['directDebitBankName'] = "Bank Name";
+$_LANG['directDebitAccountType'] = "Bank Account Type";
+$_LANG['directDebitABA'] = "Bank ABA Code";
+$_LANG['directDebitAccNumber'] = "Bank Account Number";
+$_LANG['directDebitConfirmAccNumber'] = "Confirm Account Number";
+$_LANG['directDebitSubmit'] = "Submit";
+$_LANG['directDebitChecking'] = "Checking";
+$_LANG['directDebitSavings'] = "Savings";

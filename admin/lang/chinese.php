@@ -3,9 +3,9 @@
  *
  * @ WHMCS FULL DECODED & NULLED
  *
- * @ Version  : 5.3.10
+ * @ Version  : 5.3.11
  * @ Author   : MTIMER
- * @ Release on : 2014-09-18
+ * @ Release on : 2014-12-21
  * @ Website  : http://www.mtimer.net
  *
  * */
@@ -186,6 +186,8 @@ $_ADMINLANG['clients']['activatesubaccount'] = "活跃的子账户";
 $_ADMINLANG['clients']['addcontact'] = "添加联系人";
 $_ADMINLANG['clients']['duplicateemail'] = "重复的电子邮件账户";
 $_ADMINLANG['clients']['duplicateemailexp'] = "您输入的email地址已经被其他人使用了，换个试试";
+$_ADMINLANG['clients']['erroremail'] = "邮箱地址必填";
+$_ADMINLANG['clients']['erroremailinvalid'] = "邮箱地址错误";
 $_ADMINLANG['clients']['billingcontact'] = "财务联系人";
 $_ADMINLANG['clients']['changedefault'] = "设为第一联系人";
 $_ADMINLANG['clients']['latefees'] = "滞纳金";
@@ -343,7 +345,7 @@ $_ADMINLANG['services']['confirmcommand'] = "确认操作";
 $_ADMINLANG['services']['deleteproduct'] = "删除服务";
 $_ADMINLANG['services']['createsure'] = "确定执行 开通 操作吗?";
 $_ADMINLANG['services']['suspendsure'] = "确定执行 暂停 操作吗?";
-$_ADMINLANG['services']['suspendreason'] = "暂停原因";
+$_ADMINLANG['services']['suspensionreason'] = "暂停原因";
 $_ADMINLANG['services']['suspendsendemail'] = "发送暂停通知邮件";
 $_ADMINLANG['services']['unsuspendsure'] = "确定执行 解除暂停 操作吗?";
 $_ADMINLANG['services']['terminatesure'] = "确定执行 删除 操作吗?";
@@ -481,7 +483,6 @@ $_ADMINLANG['domains']['releaseinfo'] = "该域名已成功地释放到新标签
 $_ADMINLANG['domains']['idprotectfailed'] = "ID保护切换失败";
 $_ADMINLANG['domains']['idprotectsuccess'] = "ID保护切换成功";
 $_ADMINLANG['domains']['idprotectinfo'] = "在注册成功改变ID保护状态";
-$_ADMINLANG['domains']['registrarerror'] = "注册失败";
 $_ADMINLANG['domains']['reglock'] = "注册商锁定";
 $_ADMINLANG['domains']['registrarcommands'] = "Registrar 命令";
 $_ADMINLANG['domains']['renew'] = "续费";
@@ -685,7 +686,6 @@ $_ADMINLANG['invoices']['refundsuccessmsg'] = "请求的退款金额已经通过
 $_ADMINLANG['invoices']['refundcreditmsg'] = "退款金额已退还至用户本站账户中.";
 $_ADMINLANG['invoices']['refundfailedmsg'] = "退款失败，请检查接口日志查找原因.";
 $_ADMINLANG['invoices']['ticksendconfirmation'] = "选择发送确认邮件";
-$_ADMINLANG['invoices']['addpayment'] = "添加付款";
 $_ADMINLANG['invoices']['addcredit'] = "添加付款金额到账单";
 $_ADMINLANG['invoices']['removecredit'] = "从账单中删除付款金额";
 $_ADMINLANG['invoices']['creditavailable'] = "可用的";
@@ -892,7 +892,6 @@ $_ADMINLANG['support']['kbhome'] = "常见问题";
 $_ADMINLANG['support']['articles'] = "文章";
 $_ADMINLANG['support']['views'] = "查看";
 $_ADMINLANG['support']['noarticlesfound'] = "没有找到记录";
-$_ADMINLANG['support']['views'] = "查看";
 $_ADMINLANG['support']['votes'] = "投票";
 $_ADMINLANG['support']['private'] = "注册用户可见";
 $_ADMINLANG['support']['privateinfo'] = "选择此项，只有登录用户才能查看。";
@@ -1008,6 +1007,14 @@ $_ADMINLANG['support']['staffparticipants'] = "Staff Participants";
 $_ADMINLANG['support']['tagcloud'] = "Tag Cloud";
 $_ADMINLANG['support']['tags'] = "Tag Cloud";
 $_ADMINLANG['support']['me'] = "me";
+$_ADMINLANG['support']['blockdeleteticketsfailed'] = "You must select at least one ticket to be deleted.";
+$_ADMINLANG['support']['blockdeleteticketssuccess'] = "The selected tickets have been deleted and the email addresses blocked.";
+$_ADMINLANG['support']['closeticketsfailed'] = "You must select at least one ticket to be closed.";
+$_ADMINLANG['support']['closeticketssuccess'] = "The selected tickets have been closed successfully.";
+$_ADMINLANG['support']['deleteticketsfailed'] = "You must select at least one ticket to be deleted.";
+$_ADMINLANG['support']['deleteticketssuccess'] = "The selected tickets have been deleted.";
+$_ADMINLANG['support']['mergeticketsfailed'] = "You must select at least two tickets for a merge.";
+$_ADMINLANG['support']['mergeticketssuccess'] = "The selected tickets have been merged successfully.";
 
 # Network Issues
 $_ADMINLANG['networkissues']['title'] = "网络维护";
@@ -1023,13 +1030,15 @@ $_ADMINLANG['browser']['sitename'] = "网站名称";
 $_ADMINLANG['browser']['url'] = "URL";
 $_ADMINLANG['browser']['add'] = "添加书签";
 $_ADMINLANG['browser']['deleteq'] = "确定删除?";
+$_ADMINLANG['browser']['invalidURL'] = "Invalid URL";
+$_ADMINLANG['browser']['invalidURLExplanation'] = "Please enter a full and valid URL in a format such as http://www.domain.com/path/to/file.php";
 
 # Currencies
 $_ADMINLANG['currencies']['title'] = "货币设置";
 $_ADMINLANG['currencies']['currency'] = "货币";
 $_ADMINLANG['currencies']['delsure'] = "确定删除这个货币?";
 $_ADMINLANG['currencies']['exchrateupdate'] = "汇率更新结果";
-$_ADMINLANG['currencies']['updatepricing'] = "按当前设置汇率更新价格";
+$_ADMINLANG['currencies']['updatedpricing'] = "按当前设置汇率更新价格";
 $_ADMINLANG['currencies']['updatepricinginfo'] = "所有货币类型的定价已按汇率更新成功";
 $_ADMINLANG['currencies']['info'] = "你可以通过不同的货币销售你的产品.客户可以在网站上选择他们合适的货币进行支付购买.";
 $_ADMINLANG['currencies']['deleteinuse'] = "不能删除正在被用户使用的货币类型";
@@ -1248,7 +1257,6 @@ $_ADMINLANG['fields']['contact'] = "联系方式";
 $_ADMINLANG['fields']['orderip'] = "订购者IP";
 $_ADMINLANG['fields']['promocode'] = "优惠码";
 $_ADMINLANG['fields']['affiliate'] = "推介";
-$_ADMINLANG['fields']['item'] = "条目";
 $_ADMINLANG['fields']['quantity'] = "输了";
 $_ADMINLANG['fields']['priceoverride'] = "覆盖价格";
 $_ADMINLANG['fields']['firstpaymentamount'] = "首付金额";
@@ -1725,7 +1733,7 @@ $_ADMINLANG['products']['freedomainrenewnormal'] = "赠送客户一个免费域�
 $_ADMINLANG['products']['freedomainfreerenew'] = "赠送客户一个免费域名(注册或转移)，终身免费（前提是要客户续费相关主机）";
 $_ADMINLANG['products']['freedomainpayterms'] = "免费域名使用周期";
 $_ADMINLANG['products']['selectfreedomainpayterms'] = "选择免费域名的使用周期";
-$_ADMINLANG['products']['selectfreedomainpayterms'] = "免费提供的域名 TLD's";
+$_ADMINLANG['products']['freedomaintlds'] = "免费提供的域名 TLD's";
 $_ADMINLANG['products']['customaffiliatepayout'] = "佣金设置";
 $_ADMINLANG['products']['subdomainoptions'] = "子域名设置";
 $_ADMINLANG['products']['subdomainoptionsdesc'] = "按这样的格式输入域名 .yoursubdomain1.com,.yoursubdomain2.com （不同子域名后缀用半角逗号分隔）";
@@ -1882,7 +1890,7 @@ $_ADMINLANG['automation']['exchangerates'] = "汇率更新";
 $_ADMINLANG['automation']['exchangeratesinfo'] = "选择此项，每天尝试自动更新汇率。(个人不是很建议选择，因为以前版本内置的汇率接口好像失效，cron执行后，非默认货币的汇率会自动变为0，会影响paypal付款。但不知道新版本是否修正)";
 $_ADMINLANG['automation']['productprices'] = "产品价格";
 $_ADMINLANG['automation']['productpricesinfo'] = "选择此项，每天按照汇率自动更新产品价格。";
-$_ADMINLANG['automation']['domainsettings'] = "域名提醒设置";
+$_ADMINLANG['automation']['domainremindersettings'] = "域名提醒设置";
 $_ADMINLANG['automation']['firstrenewal'] = "第一次续费提醒";
 $_ADMINLANG['automation']['firstrenewalinfo'] = "如:在到期前30天发送第一次提醒，则输入30";
 $_ADMINLANG['automation']['secondrenewal'] = "第二次续费提醒";
@@ -1979,7 +1987,7 @@ $_ADMINLANG['system']['totalsize'] = "大小";
 $_ADMINLANG['system']['opttables'] = "优化表";
 $_ADMINLANG['system']['dldbbackup'] = "下载数据库备份";
 $_ADMINLANG['system']['emailmessagelog'] = "系统邮件日志";
-$_ADMINLANG['system']['recepient'] = "收件人";
+$_ADMINLANG['system']['recipient'] = "收件人";
 $_ADMINLANG['system']['integrationcode'] = "整合代码";
 $_ADMINLANG['system']['integrationinfo'] = "下面的HTML代码可以在你网站里调用以整合你的WHMCS系统.";
 $_ADMINLANG['system']['widgetsinfo'] = "Widget是另一种有用的工具，我们提供了允许你添加动态输出到您的网站从WHMCS生活。例如，这些都可以用来显示产品说明和价格，更改时，自动更新您的网站上通过WHMCS。欲了解更多信息，请参阅";
@@ -2481,6 +2489,8 @@ $_ADMINLANG['general']['reqpassstrength'] = "所需密码强度";
 $_ADMINLANG['general']['reqpassstrengthinfo'] = "输入所需的密码强度从1到100 - 输入0禁用";
 $_ADMINLANG['general']['failedbantime'] = "管理员无法登录时间";
 $_ADMINLANG['general']['banminutes'] = "为禁止输入后，在几分钟的时间超过3个无效的登录尝试";
+$_ADMINLANG['general']['sendFailedLoginWhitelist'] = "Whitelisted IP Login Failure Notices";
+$_ADMINLANG['general']['sendFailedLoginWhitelistInfo'] = "Tick to send login failure notices for Whitelisted IP addresses";
 $_ADMINLANG['general']['adminforcessl'] = "管理队SSL访问";
 $_ADMINLANG['general']['adminforcesslinfo'] = "选择此框，迫使所有管理区要求SSL访问";
 $_ADMINLANG['general']['disableadminpwreset'] = "关闭管理员密码重置";
@@ -2685,7 +2695,7 @@ $_ADMINLANG['sendmessage']['massmailspart3'] = "? - 估计的时间，直到完�
 $_ADMINLANG['sendmessage']['massmailspart4'] = "?秒。请稍候...";
 $_ADMINLANG['sendmessage']['skippedduplicate'] = "跳过重复的电子邮件用户ID";
 $_ADMINLANG['sendmessage']['forcenextbatch'] = "现在队下一个批次";
-$_ADMINLANG['sendmessage']['sendingcompleted'] = "邮件发送完成";
+$_ADMINLANG['sendmessage']['sendingcompleted'] = "邮件队列处理完毕";
 $_ADMINLANG['sendmessage']['noreceiptients'] = "没有收件人";
 $_ADMINLANG['sendmessage']['noreceiptientsdesc'] = "此电子邮件进行选择的标准，导致没有收件人，这意味着它不能被发送";
 $_ADMINLANG['sendmessage']['emailsentindividually1'] = "单独发送电子邮件";
@@ -2970,7 +2980,7 @@ $_ADMINLANG['configservers']['groupname'] = "组名称";
 $_ADMINLANG['configservers']['servername'] = "服务名称";
 $_ADMINLANG['configservers']['activeaccounts'] = "活跃账户";
 $_ADMINLANG['configservers']['usage'] = "%用法";
-$_ADMINLANG['configservers']['disableserver'] = "禁用服务器";
+$_ADMINLANG['configservers']['disableserverclick'] = "点击以禁用服务器";
 $_ADMINLANG['configservers']['enableserver'] = "启用服务器";
 $_ADMINLANG['configservers']['addnewserver'] = "添加新服务器";
 $_ADMINLANG['configservers']['createnewgroup'] = "创建新组";
