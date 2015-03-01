@@ -3,9 +3,9 @@
  *
  * @ WHMCS FULL DECODED & NULLED
  *
- * @ Version  : 5.3.11
+ * @ Version  : 5.3.12
  * @ Author   : MTIMER
- * @ Release on : 2014-12-21
+ * @ Release on : 2015-02-28
  * @ Website  : http://www.mtimer.net
  *
  * */
@@ -101,6 +101,9 @@ $_ADMINLANG['global']['checkall'] = "Check All";
 $_ADMINLANG['global']['apply'] = "Apply";
 $_ADMINLANG['global']['filter'] = "Filter";
 $_ADMINLANG['global']['information'] = "Information";
+$_ADMINLANG['global']['cancelAndDelete'] = "Cancel & Delete";
+$_ADMINLANG['global']['before'] = "提前";
+$_ADMINLANG['global']['after'] = "延后";
 
 # Home
 $_ADMINLANG['home']['title'] = "后台首页";
@@ -532,6 +535,16 @@ $_ADMINLANG['domains']['domaincontactprimary'] = "域名资料";
 $_ADMINLANG['domains']['domaincontactusexisting'] = "使用存在的用户资料";
 $_ADMINLANG['domains']['domaincontactusecustom'] = "使用以下资料";
 $_ADMINLANG['domains']['modifySuccess'] = "Modify Success";
+$_ADMINLANG['domains']['domainReminders'] = "Sent Domain Reminders";
+$_ADMINLANG['domains']['reminder'] = "Reminder";
+$_ADMINLANG['domains']['sent'] = "Sent";
+$_ADMINLANG['domains']['firstReminder'] = "First Reminder";
+$_ADMINLANG['domains']['secondReminder'] = "Second Reminder";
+$_ADMINLANG['domains']['thirdReminder'] = "Third Reminder";
+$_ADMINLANG['domains']['fourthReminder'] = "Fourth Reminder";
+$_ADMINLANG['domains']['fifthReminder'] = "Fifth Reminder";
+$_ADMINLANG['domains']['beforeExpiry'] = "%d days before expiry";
+$_ADMINLANG['domains']['afterExpiry'] = "%d days after expiry";
 
 # Orders
 $_ADMINLANG['orders']['title'] = "订单管理";
@@ -614,6 +627,9 @@ $_ADMINLANG['orders']['ordertype'] = "订单类型";
 $_ADMINLANG['orders']['createorder'] = "创建订单";
 $_ADMINLANG['orders']['createpromo'] = "创建自定义促销";
 $_ADMINLANG['orders']['createpromoinfo'] = "促销折扣创建\"on the fly\" 这里适用于订单中的所有项目";
+$_ADMINLANG['orders']['noDelete'] = "The order status must be in Cancelled or Fraud to be deleted";
+$_ADMINLANG['orders']['massDeleteError'] = "Some orders could not be removed. An order must be in Cancelled or Fraud to be deleted";
+$_ADMINLANG['orders']['confirmCancelDelete'] = "Are you sure you want to cancel and delete this order? This will run module termination for any active products/services and delete all related products/services & invoice.";
 
 # Billing Cycles
 $_ADMINLANG['billingcycles']['free'] = "免费";
@@ -1022,6 +1038,41 @@ $_ADMINLANG['networkissues']['open'] = "开启的";
 $_ADMINLANG['networkissues']['scheduled'] = "计划的";
 $_ADMINLANG['networkissues']['resolved'] = "已解决";
 $_ADMINLANG['networkissues']['addnew'] = "新增";
+$_ADMINLANG['networkissues']['deletesure'] = "Are you sure you want to delete this issue?";
+$_ADMINLANG['networkIssues']['missingDescription'] = "A description of the issue is required.";
+$_ADMINLANG['networkIssues']['missingTitle'] = "A title is required summarising the issue.";
+$_ADMINLANG['networkIssues']['missingType'] = "You must choose a type for the issue.";
+$_ADMINLANG['networkIssues']['missingServer'] = "For a server affecting issue, you must select a server.";
+$_ADMINLANG['networkIssues']['missingAffecting'] = "For a system or other type of issue, you must specify System/Other.";
+$_ADMINLANG['networkIssues']['missingStartDate'] = "The start date is required.";
+$_ADMINLANG['networkIssues']['titleTitle'] = "Title";
+$_ADMINLANG['networkIssues']['type'] = "Type";
+$_ADMINLANG['networkIssues']['priority'] = "Priority";
+$_ADMINLANG['networkIssues']['status'] = "Status";
+$_ADMINLANG['networkIssues']['startDate'] = "Start Date";
+$_ADMINLANG['networkIssues']['endDate'] = "End Date";
+$_ADMINLANG['networkIssues']['validationFailed'] = "Validation Failed";
+$_ADMINLANG['networkIssues']['modifyExisting'] = "Modify Existing Issue";
+$_ADMINLANG['networkIssues']['createNewIssue'] = "Create New Issue";
+$_ADMINLANG['networkIssues']['typeServer'] = "Server";
+$_ADMINLANG['networkIssues']['typeSystem'] = "System";
+$_ADMINLANG['networkIssues']['typeOther'] = "Other";
+$_ADMINLANG['networkIssues']['priorityCritical'] = "Critical";
+$_ADMINLANG['networkIssues']['priorityLow'] = "Low";
+$_ADMINLANG['networkIssues']['priorityMedium'] = "Medium";
+$_ADMINLANG['networkIssues']['priorityHigh'] = "High";
+$_ADMINLANG['networkIssues']['statusReported'] = "Reported";
+$_ADMINLANG['networkIssues']['statusInvestigating'] = "Investigating";
+$_ADMINLANG['networkIssues']['statusInProgress'] = "In Progress";
+$_ADMINLANG['networkIssues']['statusOutage'] = "Outage";
+$_ADMINLANG['networkIssues']['statusScheduled'] = "Scheduled";
+$_ADMINLANG['networkIssues']['statusResolved'] = "Resolved";
+$_ADMINLANG['networkIssues']['fieldServer'] = "Server";
+$_ADMINLANG['networkIssues']['fieldOther'] = "System/Other";
+$_ADMINLANG['networkIssues']['fieldTitle'] = "Title";
+$_ADMINLANG['networkIssues']['none'] = "None";
+$_ADMINLANG['networkIssues']['reopen'] = "Reopen";
+$_ADMINLANG['networkIssues']['close'] = "Close";
 
 # Browser
 $_ADMINLANG['browser']['bookmarks'] = "书签";
@@ -1312,6 +1363,9 @@ $_ADMINLANG['fields']['disable'] = "Disable";
 $_ADMINLANG['fields']['filltype'] = "Fill Type";
 $_ADMINLANG['fields']['selectedservers'] = "Selected Servers";
 $_ADMINLANG['fields']['daterange'] = "Date Range";
+$_ADMINLANG['fields']['userId'] = "User ID";
+$_ADMINLANG['fields']['dateSent'] = "Date Sent";
+$_ADMINLANG['fields']['export'] = "Export";
 
 # Contact Permissions
 $_ADMINLANG['contactpermissions']['permprofile'] = "修改主帐户资料";
@@ -1726,8 +1780,6 @@ $_ADMINLANG['products']['packagesupgrades'] = "套餐升级";
 $_ADMINLANG['products']['usectrlclickpkgs'] = "按住 Ctrl+Click 选择";
 $_ADMINLANG['products']['usectrlclickpayterms'] = "按住 Ctrl+Click 选择";
 $_ADMINLANG['products']['tickboxallowconfigoptupdowngrades'] = "选择此选项，允许用户升级和降级已购买的产品设置。";
-$_ADMINLANG['products']['upgradechargefullcycle'] = "充饱周期";
-$_ADMINLANG['products']['upgradechargefullcyclelabel'] = "勾选此框，一个完整的循环充电，本产品升级/降级";
 $_ADMINLANG['products']['upgradeemail'] = "升级通知邮件";
 $_ADMINLANG['products']['freedomainrenewnormal'] = "赠送客户一个免费域名(注册或转移)，续费付费";
 $_ADMINLANG['products']['freedomainfreerenew'] = "赠送客户一个免费域名(注册或转移)，终身免费（前提是要客户续费相关主机）";
@@ -1768,6 +1820,7 @@ $_ADMINLANG['products']['updatesort'] = "更新排序";
 $_ADMINLANG['products']['orderfrmtplajaxcartenabled'] = "This feature is not available when using the <strong>Ajax Cart</strong> template as the default order form template.<br />This is due to the unique way in which the Ajax Cart template dynamically loads each step in a single page.<br />If you would like to use this feature, you will need to select an alternative default template in <em>Setup > General Settings > Ordering</em>";
 $_ADMINLANG['products']['orderfrmtplunavailable'] = "Unavailable";
 $_ADMINLANG['products']['orderfrmtplunavailableexpl'] = "The Ajax Cart template cannot be used as a product group template";
+$_ADMINLANG['products']['orderFrmAjaxUnavailableOverride'] = "The Ajax Cart template cannot be set as the default when using a Product Group defined template";
 $_ADMINLANG['products']['setupreset'] = "The setup fee cannot be less than 0.00 and has been reset automatically";
 
 # Downloads
@@ -1892,15 +1945,15 @@ $_ADMINLANG['automation']['productprices'] = "产品价格";
 $_ADMINLANG['automation']['productpricesinfo'] = "选择此项，每天按照汇率自动更新产品价格。";
 $_ADMINLANG['automation']['domainremindersettings'] = "域名提醒设置";
 $_ADMINLANG['automation']['firstrenewal'] = "第一次续费提醒";
-$_ADMINLANG['automation']['firstrenewalinfo'] = "如:在到期前30天发送第一次提醒，则输入30";
+$_ADMINLANG['automation']['firstrenewalinfo'] = "%s多少天发送第一次续费提醒";
 $_ADMINLANG['automation']['secondrenewal'] = "第二次续费提醒";
-$_ADMINLANG['automation']['secondrenewalinfo'] = "如:在到期前15天发送第二次提醒，则输入15";
+$_ADMINLANG['automation']['secondrenewalinfo'] = "%s多少天发送第二次续费提醒";
 $_ADMINLANG['automation']['thirdrenewal'] = "第三次续费提醒";
-$_ADMINLANG['automation']['thirdrenewalinfo'] = "如:在到期前7天发送第三次提醒，则输入7";
+$_ADMINLANG['automation']['thirdrenewalinfo'] = "%s多少天发送第三次续费提醒";
 $_ADMINLANG['automation']['fourthrenewal'] = "第四次续费提醒";
-$_ADMINLANG['automation']['fourthrenewalinfo'] = "如:在到期前3天发送第四次提醒，则输入3";
-$_ADMINLANG['automation']['fifthrenewal'] = "第四次续费提醒";
-$_ADMINLANG['automation']['fifthrenewalinfo'] = "如:在到期前1天发送第五次提醒，则输入1";
+$_ADMINLANG['automation']['fourthrenewalinfo'] = "%s多少天发送第四次续费提醒";
+$_ADMINLANG['automation']['fifthrenewal'] = "第五次续费提醒";
+$_ADMINLANG['automation']['fifthrenewalinfo'] = "%s多少天发送第五次续费提醒";
 $_ADMINLANG['automation']['ticketsettings'] = "服务单设置";
 $_ADMINLANG['automation']['inactivetickets'] = "关闭服务单";
 $_ADMINLANG['automation']['inactiveticketsinfo'] = "如：在客服回复服务单48小时之内没有回应，则自动关闭服务单，就填48.这里是以小时计";
@@ -2245,6 +2298,11 @@ $_ADMINLANG['mergefields']['looping1'] = "遍历数据可用于循环账单项�
 $_ADMINLANG['mergefields']['date'] = "完整的发送日期";
 $_ADMINLANG['mergefields']['time'] = "完整的发送时间";
 $_ADMINLANG['mergefields']['unsubscribeurl'] = "市场商情URL";
+$_ADMINLANG['mergefields']['daysUntilInformation'] = "'Days Until Expiry' and 'Days Until Next Due' will show 0 if the date has passed.";
+$_ADMINLANG['mergefields']['daysUntilInformation2'] = "'Days After Expiry' and 'Days After Next Due' should be used if the date has passed.";
+$_ADMINLANG['mergefields']['daysAfterExpiry'] = "Days After Expiry";
+$_ADMINLANG['mergefields']['daysAfterNextDue'] = "Days After Next Due";
+$_ADMINLANG['mergefields']['daysAfterInformation'] = "'Days After Expiry' and 'Days After Next Due' will only be defined if the date has passed.";
 
 # Config Fraud
 $_ADMINLANG['fraud']['title'] = "欺诈保护";
@@ -2566,6 +2624,8 @@ $_ADMINLANG['general']['trustedproxyinfo'] = 'IP addresses of trusted proxies th
 $_ADMINLANG['general']['addtrustedproxy'] = 'Add Trusted Proxy';
 $_ADMINLANG['general']['logapiauthentication'] = 'Log API Authentiation';
 $_ADMINLANG['general']['logapiauthenticationinfo'] = 'Tick to record successful API authentications in Admin Log';
+$_ADMINLANG['general']['preventEmailReopeningTicket'] = 'Prevent Email Reopening';
+$_ADMINLANG['general']['preventEmailReopeningTicketDescription'] = 'Tick to prevent email replies from re-opening closed tickets and to send an email advising to open a new ticket or update the existing ticket for clients.';
 
 # Config Tax
 $_ADMINLANG['taxconfig']['taxrulestitle'] = "税法规定";
@@ -2923,6 +2983,10 @@ $_ADMINLANG['reports']['tools'] = "工具";
 $_ADMINLANG['reports']['exportcsv'] = "导出CSV";
 $_ADMINLANG['reports']['printableversion'] = "查看可打印版本";
 $_ADMINLANG['reports']['closewindow'] = "关闭窗口";
+$_ADMINLANG['reports']['domainRenewalEmailsTitle'] = "Domain Renewal Reminder Emails";
+$_ADMINLANG['reports']['domainRenewalEmailsDescription'] = "This report can be used to generate a custom export of the Domain Renewal Reminder Emails.";
+$_ADMINLANG['reports']['generateReport'] = "Generate Report";
+$_ADMINLANG['reports']['leaveBlankAll'] = "Leave blank for all time";
 
 # WHOIS
 $_ADMINLANG['whois']['title'] = "域名WHOIS查询";
