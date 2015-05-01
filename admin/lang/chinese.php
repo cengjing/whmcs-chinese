@@ -3,9 +3,9 @@
  *
  * @ WHMCS FULL DECODED & NULLED
  *
- * @ Version  : 5.3.12
+ * @ Version  : 5.3.13
  * @ Author   : MTIMER
- * @ Release on : 2015-02-28
+ * @ Release on : 2015-05-02
  * @ Website  : http://www.mtimer.net
  *
  * */
@@ -2772,6 +2772,7 @@ $_ADMINLANG['sendmessage']['preview'] = "邮件预览";
 $_ADMINLANG['sendmessage']['marketingemail'] = "营销Email?";
 $_ADMINLANG['sendmessage']['dontsendemailunsubscribe'] = "不发送此邮件客户端已经取消Email营销";
 $_ADMINLANG['sendmessage']['marketingemaildesc'] = "记得加入 %s 和 CAN-SPAM Act 兼容";
+$_ADMINLANG['sendmessage']['loadMessage'] = "加载邮件";
 
 # Support Ticket Spam Control
 $_ADMINLANG['stspamcontrol']['stspamcontroltitle'] = "支持票务垃圾邮件控制";
