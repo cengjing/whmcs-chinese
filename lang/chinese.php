@@ -13,7 +13,7 @@
  *
  * @package    WHMCS
  * @author     WHMCS Limited <development@whmcs.com>
- * @copyright  Copyright (c) WHMCS Limited 2005-2013
+ * @copyright  Copyright (c) WHMCS Limited 2005-2015
  * @license    http://www.whmcs.com/license/ WHMCS Eula
  * @version    $Id$
  * @link       http://www.whmcs.com/ http://www.mtimer.cn/
@@ -22,6 +22,7 @@
 if (!defined("WHMCS")) die("This file cannot be accessed directly");
 
 $_LANG['isocode'] = 'zh';
+$_LANG['locale'] = "zh";
 
 $_LANG['accountinfo'] = "账户信息";
 $_LANG['accountstats'] = "账户统计";
@@ -181,7 +182,7 @@ $_LANG['clientareaerrorpostcode2'] = "邮编只能包含字母、数字和空格
 $_LANG['clientareaerrors'] = "发生以下错误：";
 $_LANG['clientareaerrorstate'] = "您没有输入省份";
 $_LANG['clientareaexpired'] = "已过期";
-$_LANG['clientareafirstname'] = "名";
+$_LANG['clientareafirstname'] = "姓名";
 $_LANG['clientareafraud'] = "欺诈";
 $_LANG['clientareafullname'] = "客户姓名";
 $_LANG['clientareaheader'] = "欢迎您来到我们的会员中心，在这里您可以浏览或更新个人数据、查询您所订购的主机方案与域名、提交支持单与订购额外的产品和服务。此页展示了任何打开的支持单和未付款账单的简要总览。请确保您的联系信息是最新的。";
@@ -193,7 +194,7 @@ $_LANG['clientareahostingdomain'] = "域名";
 $_LANG['clientareahostingnextduedate'] = "下次付款日期";
 $_LANG['clientareahostingpackage'] = "方案";
 $_LANG['clientareahostingregdate'] = "注册日期";
-$_LANG['clientarealastname'] = "姓";
+$_LANG['clientarealastname'] = "称呼";
 $_LANG['clientarealastupdated'] = "最近更新";
 $_LANG['clientarealeaveblank'] = "除非您想修改您的密码，否则请留空。";
 $_LANG['clientareamodifydomaincontactinfo'] = "修改域名联系人信息";
@@ -232,7 +233,7 @@ $_LANG['clientareastatus'] = "状态";
 $_LANG['clientareasuspended'] = "已暂停";
 $_LANG['clientareaterminated'] = "已删除";
 $_LANG['clientareaticktoenable'] = "点击启用";
-$_LANG['clientareatitle'] = "客户中心";
+$_LANG['clientareatitle'] = "账户信息";
 $_LANG['clientareaunlimited'] = "无限";
 $_LANG['clientareaupdatebutton'] = "更新";
 $_LANG['clientareaupdateyourdetails'] = "修改我的帐户资料";
@@ -427,7 +428,7 @@ $_LANG['invoicesdescription'] = "描述";
 $_LANG['invoicesdownload'] = "下载";
 $_LANG['invoicesdue'] = "应付账单";
 $_LANG['invoiceserror'] = "发生错误，请重试。";
-$_LANG['invoicesinvoicedto'] = "付款给";
+$_LANG['invoicesinvoicedto'] = "付款从";
 $_LANG['invoicesinvoicenotes'] = "账单注释";
 $_LANG['invoicesnoinvoices'] = "没有账单";
 $_LANG['invoicesnotes'] = "注释";
@@ -494,7 +495,7 @@ $_LANG['maxmind_callingnow'] = "我们将自动拨打电话。这是我们防止
 $_LANG['maxmind_countrymismatch'] = "您的IP地址与填写的资料里的国家不匹配，所以我们不能接受您的订单.";
 $_LANG['maxmind_error'] = "错误";
 $_LANG['maxmind_faileddescription'] = "您输入的代码是不正确的，如果您觉得系统有误请尽快联络我们的支持部门。";
-$_LANG['maxmind_highfraudriskscore'] = '我们的系统察觉您订单欺诈的风险很大因此需要人工审核。<br /><br />如果你认为此信息错误, 请接收我们的歉意并向客服部 <a href="submitticket.php">提交工单</a> 。感谢您的理解。';
+$_LANG['maxmind_highfraudriskscore'] = "我们的系统察觉您订单诈骗的风险很大因此阻止了此订单。";
 $_LANG['maxmind_highriskcountry'] = "我们不能接受来自您的国家的订购因为诈骗的风险很大。";
 $_LANG['maxmind_incorrectcode'] = "错误的代码";
 $_LANG['maxmind_pincode'] = "个人识别码";
@@ -559,9 +560,9 @@ $_LANG['orderdiscount'] = "折扣";
 $_LANG['orderdomain'] = "域名";
 $_LANG['orderdomainoption1part1'] = "我没有域名所以我需要在";
 $_LANG['orderdomainoption1part2'] = "注册一个新域名";
-$_LANG['orderdomainoption2'] = "我不需要注册新域名我将把已有域名解析到此空间.";
-$_LANG['orderdomainoption3'] = "我需要把在其他地方注册的已有域名转移到我在站长数据的账户里.";
-$_LANG['orderdomainoption4'] = "我需要一个可以免费使用的二级域名.";
+$_LANG['orderdomainoption2'] = "我不需要注册新域名，我将把已有域名解析到此空间。";
+$_LANG['orderdomainoption3'] = "我需要把在其他地方注册的已有域名转移到我在“边城主机”的账户里。";
+$_LANG['orderdomainoption4'] = "我需要一个可以免费使用的二级域名。";
 $_LANG['orderdomainoptions'] = "域名选项";
 $_LANG['orderdomainregistration'] = "域名注册";
 $_LANG['orderdomainregonly'] = "域名注册";
@@ -1060,7 +1061,7 @@ $_LANG['cartnameserverchoicedefault'] = "使用本公司DNS服务器";
 $_LANG['cartnameserverchoicecustom'] = "使用自定义DNS服务器";
 $_LANG['cartfollowingaddonsavailable'] = "下面的增值服务可以应用到您的产品。";
 $_LANG['cartregisterdomainchoice'] = "我没有域名所以我需要注册一个新域名";
-$_LANG['carttransferdomainchoice'] = "我需要把在其他地方注册的已有域名转移到我在站长数据的账户里";
+$_LANG['carttransferdomainchoice'] = "我需要把在其他地方注册的已有域名转移到我在“边城主机”的账户里";
 $_LANG['cartexistingdomainchoice'] = "我不需要注册新域名我将把已有域名解析到此空间";
 $_LANG['cartsubdomainchoice'] = "我希望使用免费的域名 %s";
 $_LANG['carterrordomainconfigskipped'] = "您需要返回配置一个有效的域名";
@@ -1515,27 +1516,6 @@ $_LANG['enomfrregistration']['EU Non-French Companies']['Name'] = 'EU Non-French
 $_LANG['enomfrregistration']['EU Non-French Companies']['Requirements'] = 'Please provide the company "DUNS Number", and the "Birthdate" of the Owner Contact.';
 $_LANG['enomfrregistration']['Non-EU Warning'] = 'Client contact information must be within the EU or else registration will fail.';
 
-$_LANG['confirm'] = "Confirm";
-
 $_LANG['maxmind_checkconfiguration'] = 'An error occurred with the Fraud Check. Please contact support.';
 $_LANG['maxmind_addressinvalid'] = 'Your address is not recognised. Please check and re-enter.';
 $_LANG['maxmind_invalidip'] = 'IP Address invalid or a local address. Please contact support.';
-
-$_LANG['directDebitPageTitle'] = "Direct Debit Payment";
-$_LANG['directDebitHeader'] = "Direct Debit Payment";
-$_LANG['directDebitErrorNoBankName'] = "You must enter your banks name";
-$_LANG['directDebitErrorAccountType'] = "You must select your bank account type";
-$_LANG['directDebitErrorNoABA'] = "You must enter your banks ABA code";
-$_LANG['directDebitErrorAccNumber'] = "You must enter your bank account number";
-$_LANG['directDebitErrorConfirmAccNumber'] = "You must confirm your bank account number";
-$_LANG['directDebitErrorAccNumberMismatch'] = "Your bank account number & confirmation don't match";
-$_LANG['directDebitThanks'] = "Thank you for submitting your details. We will attempt to process your payment using the supplied details within the next few days, and contact you in case of any problems.";
-$_LANG['directDebitPleaseSubmit'] = "Please submit your bank account details below to pay by Direct Debit.";
-$_LANG['directDebitBankName'] = "Bank Name";
-$_LANG['directDebitAccountType'] = "Bank Account Type";
-$_LANG['directDebitABA'] = "Bank ABA Code";
-$_LANG['directDebitAccNumber'] = "Bank Account Number";
-$_LANG['directDebitConfirmAccNumber'] = "Confirm Account Number";
-$_LANG['directDebitSubmit'] = "Submit";
-$_LANG['directDebitChecking'] = "Checking";
-$_LANG['directDebitSavings'] = "Savings";
